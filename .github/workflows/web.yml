@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'hello-react/**'
-      - '.github/workflows/hello-react-ci.yml'
+      - 'web/**'
+      - '.github/workflows/web.yml'
 
 jobs:
   test-build:
@@ -15,8 +15,8 @@ jobs:
       - uses: ./.github/actions/setup-node-env
         with:
           node-version: 18
-          cache-path: hello-react/node_modules
-          cache-key: "${{hashFiles('hello-react/package-lock.json')}}"
-          project: hello-react
-      - run: npm test --prefix hello-react -- a --watchAll=false
-      - run: npm run build --prefix hello-react
+          cache-path: web/node_modules
+          cache-key: "${{hashFiles('web/package-lock.json')}}"
+          project: web
+      - run: npm test --prefix web -- a --watchAll=false
+      - run: npm run build --prefix web
