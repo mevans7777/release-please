@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/mevans7777/release-please/compare/web-v0.3.0...web-v0.4.0) (2025-07-07)
+
+
+### Features
+
+* example 1 ([74eb2b4](https://github.com/mevans7777/release-please/commit/74eb2b489818f747b5ac89fde7c8f6c3848788b0))
+* example 2 ([d7d8de0](https://github.com/mevans7777/release-please/commit/d7d8de0e4961dec3eac1b80a292474706028d3df))
+
 ## [0.3.0](https://github.com/mevans7777/release-please/compare/hello-react@v0.2.0...hello-react@v0.3.0) (2025-07-07)
 
 
