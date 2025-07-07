@@ -1,4 +1,4 @@
-name: Hello React CI
+name: Web CI
 
 on:
   workflow_dispatch:
