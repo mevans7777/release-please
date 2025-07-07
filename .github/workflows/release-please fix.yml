@@ -1,0 +1,65 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - release/**
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      web--tag_name: ${{ steps.release.outputs.web--tag_name}}
+      web--release_created: ${{ steps.release.outputs.web--release_created}}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for Release Please to analyze history
+
+      - name: Get branch name
+        id: branch_name
+        run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
+
+      - name: Debug Branch Name
+        run: 'echo "Processing branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}"'
+
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          default-branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}
+
+      - name: Print release outputs for debugging
+        continue-on-error: true
+        run: |
+          echo "Release outputs:"
+          echo "${{ toJson(steps.release.outputs) }}"
+
+
+  release-web:
+    if: ${{needs.release-please.outputs.web--release_created}}
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-node-env
+        with:
+          node-version: 18
+          cache-path: web/node_modules
+          cache-key: "${{hashFiles('web/package-lock.json')}}"
+          project: web
+      - run: npm test --prefix web -- a --watchAll=false
+      - run: npm run build --prefix web
+      - run: zip -r web-build.zip web/build
+      - name: Upload Release Artifact
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ needs.release-please.outputs.web--tag_name }} web-build.zip
