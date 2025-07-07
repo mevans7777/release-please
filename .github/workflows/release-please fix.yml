@@ -35,7 +35,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-          default-branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}
+          target-branch: ${{ steps.branch_name.outputs.BRANCH_NAME }}
 
       - name: Print release outputs for debugging
         continue-on-error: true
