@@ -16,4 +16,5 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // First feature test
 // Second feature test
+// Fix example fix one
 reportWebVitals();
