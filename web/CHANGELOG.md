@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/mevans7777/release-please/compare/web-v0.5.0...web-v0.5.1) (2025-07-07)
+
+
+### Bug Fixes
+
+* feature 2 ([2587144](https://github.com/mevans7777/release-please/commit/2587144f9771088a37624def21c794af6ba304de))
+
 ## [0.5.0](https://github.com/mevans7777/release-please/compare/web-v0.4.0...web-v0.5.0) (2025-07-07)
 
 
