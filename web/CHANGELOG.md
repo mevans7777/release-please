@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0](https://github.com/mevans7777/release-please/compare/web-v0.7.0...web-v1.0.0) (2025-07-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* feature 7
+
+### Features
+
+* feature 7 ([81e2988](https://github.com/mevans7777/release-please/commit/81e2988532a953df2666388887e8dba3e6e5a140))
+* feature 8 ([5d1a812](https://github.com/mevans7777/release-please/commit/5d1a8120dd0664e426f13ff178614a6d8f0ac4ac))
+
+
+### Bug Fixes
+
+* feature 2 ([43501c9](https://github.com/mevans7777/release-please/commit/43501c9328655d5c2955f7c278cee3e05a65c73d))
+
 ## [0.7.0](https://github.com/mevans7777/release-please/compare/web-v0.6.0...web-v0.7.0) (2025-07-08)
 
 
