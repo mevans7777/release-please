@@ -20,4 +20,5 @@ root.render(
 // web feature 4
 // fix: feature 2
 // web feature 5
+// web feature 6
 reportWebVitals();
