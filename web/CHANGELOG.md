@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/mevans7777/release-please/compare/web-v1.7.0...web-v1.8.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 17 and simplify deployment workflow conditions ([c457872](https://github.com/mevans7777/release-please/commit/c4578729bb3b6ca0dc64ca203706a721d5bdc2d2))
+
 ## [1.7.0](https://github.com/mevans7777/release-please/compare/web-v1.6.0...web-v1.7.0) (2025-07-19)
 
 
