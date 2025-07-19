@@ -53,32 +53,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ needs.release-please.outputs.web--tag_name }} ${{ needs.release-please.outputs.web--tag_name }}.zip
 
-  deploy:
+  trigger-uat-deployment:
     if: ${{needs.release-please.outputs.web--release_created}}
-    name: 'Deploy uat'
+    name: 'Trigger UAT Deployment'
     runs-on: ubuntu-latest
     needs: 
       - build
       - release-please
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Deploy to uat
-        shell: bash
+      - name: Trigger deploy-uat workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Deploy to uat"
-      
-  test:
-    if: ${{needs.release-please.outputs.web--release_created}}
-    runs-on: ubuntu-latest
-    needs: 
-      - deploy
-      - release-please
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Test
-        shell: bash
-        run: |
-          echo "Test"
+          echo "Triggering UAT deployment with tag ${{ needs.release-please.outputs.web--tag_name }}"
+          gh workflow run deploy-uat.yml --ref ${{ needs.release-please.outputs.web--tag_name }}
