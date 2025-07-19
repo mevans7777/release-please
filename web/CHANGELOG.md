@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/mevans7777/release-please/compare/web-v1.2.0...web-v1.3.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 12 to index.js ([f6a126d](https://github.com/mevans7777/release-please/commit/f6a126db1b2a0541d3daaef164c09af8fe2fbb33))
+
 ## [1.2.0](https://github.com/mevans7777/release-please/compare/web-v1.1.0...web-v1.2.0) (2025-07-19)
 
 
