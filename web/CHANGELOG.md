@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/mevans7777/release-please/compare/web-v1.6.0...web-v1.7.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 16 and enhance commit message parsing in deployment workflow ([7e80b75](https://github.com/mevans7777/release-please/commit/7e80b755b27d449f358d1fceee110841978ff57a))
+
 ## [1.6.0](https://github.com/mevans7777/release-please/compare/web-v1.5.0...web-v1.6.0) (2025-07-19)
 
 
