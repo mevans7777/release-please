@@ -55,6 +55,7 @@ jobs:
 
   deploy:
     if: ${{needs.release-please.outputs.web--release_created}}
+    name: 'Deploy uat'
     runs-on: ubuntu-latest
     needs: 
       - build
