@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/mevans7777/release-please/compare/web-v1.3.0...web-v1.4.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 13 to index.js ([320e205](https://github.com/mevans7777/release-please/commit/320e20503782d8f7773a0ce2e99384c413ef31eb))
+
 ## [1.3.0](https://github.com/mevans7777/release-please/compare/web-v1.2.0...web-v1.3.0) (2025-07-19)
 
 
