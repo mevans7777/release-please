@@ -23,7 +23,8 @@ jobs:
       - name: Check commit message
         id: check_commit
         run: |
-          COMMIT_MSG="$(git log -1 --pretty=format:'%s')"
+          # Get the full commit message (subject and body)
+          COMMIT_MSG="$(git log -1 --pretty=format:'%B')"
           echo "Commit message: $COMMIT_MSG"
           
           if [[ "$COMMIT_MSG" == *"chore(main): release web"* ]]; then
