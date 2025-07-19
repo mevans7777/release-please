@@ -23,6 +23,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+      - name: Print raw release outputs for debugging
+        continue-on-error: true
+        run: |
+          echo "Release outputs:"
+          echo "${{ steps.release.outputs }}"
       - name: Print release outputs for debugging
         continue-on-error: true
         run: |
