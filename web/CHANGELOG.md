@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/mevans7777/release-please/compare/web-v1.9.0...web-v1.10.0) (2025-07-19)
+
+
+### Features
+
+* split release and deploy workflows for UAT environment ([a5a9e4b](https://github.com/mevans7777/release-please/commit/a5a9e4b1b0874c0dfb8896497d079f99248c3871))
+
 ## [1.9.0](https://github.com/mevans7777/release-please/compare/web-v1.8.0...web-v1.9.0) (2025-07-19)
 
 
