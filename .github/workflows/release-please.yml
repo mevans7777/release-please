@@ -27,12 +27,12 @@ jobs:
         continue-on-error: true
         run: |
           echo "Release outputs:"
-          echo "${{ steps.release.outputs }}"
+          echo '${{ steps.release.outputs }}'
       - name: Print release outputs for debugging
         continue-on-error: true
         run: |
           echo "Release outputs:"
-          echo "${{ toJson(steps.release.outputs) }}"
+          echo '${{ toJson(steps.release.outputs) }}'
 
   release-web:
     if: ${{needs.release-please.outputs.web--release_created}}
