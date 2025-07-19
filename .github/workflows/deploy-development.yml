@@ -9,35 +9,9 @@ on:
       - '.github/workflows/deploy-development.yml'
 
 jobs:
-  # Check if this is a release commit
-  check_commit:
-    runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.check_commit.outputs.should_run }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      
-      - name: Check commit message
-        id: check_commit
-        run: |
-          # Get the full commit message (subject and body)
-          COMMIT_MSG="$(git log -1 --pretty=format:'%B')"
-          echo "Commit message: $COMMIT_MSG"
-          
-          if [[ "$COMMIT_MSG" == *"chore(main): release web"* ]]; then
-            echo "This is a release commit, skipping workflow"
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "Not a release commit, running workflow"
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-          fi
 
   build:
-    needs: check_commit
-    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -51,8 +25,8 @@ jobs:
   deploy:
     name: 'Deploy Development'
     runs-on: ubuntu-latest
-    needs: [build, check_commit]
-    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
+    needs: build
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -64,7 +38,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: [deploy]
+    needs: deploy
     if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
     steps:
       - name: Checkout code
