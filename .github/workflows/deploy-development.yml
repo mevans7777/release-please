@@ -64,8 +64,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: [deploy, check_commit]
-    if: ${{ needs.check_commit.outputs.should_run == 'true' }}
+    needs: [deploy]
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
