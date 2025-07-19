@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/mevans7777/release-please/compare/web-v1.8.0...web-v1.9.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 19 to index.js ([0529827](https://github.com/mevans7777/release-please/commit/05298270bb421ffc5e3551382de00c389666582f))
+
 ## [1.8.0](https://github.com/mevans7777/release-please/compare/web-v1.7.0...web-v1.8.0) (2025-07-19)
 
 
