@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/mevans7777/release-please/compare/web-v1.0.0...web-v1.1.0) (2025-07-19)
+
+
+### Features
+
+* add feature 10 patch to web vitals reporting ([8fd1ba4](https://github.com/mevans7777/release-please/commit/8fd1ba459b0a555028c200ec9083b6acf8f41614))
+* add web feature 9 to index.js ([4570bc0](https://github.com/mevans7777/release-please/commit/4570bc0c0efae8a1356cd55c4c570820f66bc980))
+
 ## [1.0.0](https://github.com/mevans7777/release-please/compare/web-v0.7.0...web-v1.0.0) (2025-07-08)
 
 
