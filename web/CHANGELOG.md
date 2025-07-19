@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/mevans7777/release-please/compare/web-v1.10.0...web-v1.11.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 21 and checkout step in release workflow ([d2f839b](https://github.com/mevans7777/release-please/commit/d2f839bee1d28d6422d1579b64db7c5509d1738a))
+
 ## [1.10.0](https://github.com/mevans7777/release-please/compare/web-v1.9.0...web-v1.10.0) (2025-07-19)
 
 
