@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  
+
   checkout:
     runs-on: ubuntu-latest
     steps:
@@ -43,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [validate]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - name: Deploy to Production
         shell: bash
         run: |

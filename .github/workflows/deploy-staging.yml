@@ -43,6 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [validate]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - name: Deploy to Staging
         shell: bash
         run: |
