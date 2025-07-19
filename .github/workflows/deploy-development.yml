@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'web/**'
-      - '.github/workflows/web.yml'
-      - '!web/CHANGELOG.md'
+    paths-ignore:
+      - 'web/CHANGELOG.md'
+      - '.github/**'
+      - './*'
 
 jobs:
 
