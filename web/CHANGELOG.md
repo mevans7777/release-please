@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/mevans7777/release-please/compare/web-v1.5.0...web-v1.6.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 15 to index.js ([9a0bf3e](https://github.com/mevans7777/release-please/commit/9a0bf3ed09bb678a2adb417c7cfd6ffef6ed0181))
+
 ## [1.5.0](https://github.com/mevans7777/release-please/compare/web-v1.4.0...web-v1.5.0) (2025-07-19)
 
 
