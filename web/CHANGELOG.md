@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/mevans7777/release-please/compare/web-v1.1.0...web-v1.2.0) (2025-07-19)
+
+
+### Features
+
+* add web feature 11 implementation ([181b01f](https://github.com/mevans7777/release-please/commit/181b01fc327912b26c3ba52f28094d63edb1d3be))
+
 ## [1.1.0](https://github.com/mevans7777/release-please/compare/web-v1.0.0...web-v1.1.0) (2025-07-19)
 
 
