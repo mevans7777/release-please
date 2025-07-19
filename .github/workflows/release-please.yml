@@ -17,17 +17,16 @@ jobs:
       web--tag_name: ${{ steps.release.outputs.web--tag_name}}
       web--release_created: ${{ steps.release.outputs.web--release_created}}
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: googleapis/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-      - name: Print raw release outputs for debugging
-        continue-on-error: true
-        run: |
-          echo "Release outputs:"
-          echo '${{ steps.release.outputs }}'
       - name: Print release outputs for debugging
         continue-on-error: true
         run: |

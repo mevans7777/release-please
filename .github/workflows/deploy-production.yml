@@ -1,0 +1,49 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+
+jobs:
+  
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+  validate:
+    runs-on: ubuntu-latest
+    outputs:
+      deploy_tag: ${{ steps.validate.outputs.deploy_tag }}
+    steps:
+      - name: Validate tag format
+        id: validate
+        shell: bash
+        run: |
+          echo "Validating tag: ${{ github.ref_name }}"
+          
+          # Check if the tag starts with web-v
+          if [[ ! "${{ github.ref_name }}" =~ ^web-v ]]; then
+            echo "Error: Tag must start with 'web-v'"
+            exit 1
+          fi
+          
+          echo "Tag validation successful"
+          # Set the tag as an output for this job
+          echo "deploy_tag=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug
+        shell: bash
+        run: |
+          env
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [validate]
+    steps:
+      - name: Deploy to Production
+        shell: bash
+        run: |
+          echo "deployment of tag ${{ needs.validate.outputs.deploy_tag }} to production"

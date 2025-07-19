@@ -3,7 +3,7 @@ name: Release Please Patch
 on:
   push:
     branches:
-      - release/**
+      - patch/**
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required for Release Please to analyze history
+          fetch-depth: 0
 
       - name: Get branch name
         id: branch_name
