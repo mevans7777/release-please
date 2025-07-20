@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.17.0](https://github.com/mevans7777/release-please/compare/web-v1.16.0...web-v1.17.0) (2025-07-20)
+
+
+### Features
+
+* add web feature 27 to index.js ([fdaeb9e](https://github.com/mevans7777/release-please/commit/fdaeb9ed957687c10fc1f78dcd6c5001a915a77d))
+* add web feature 28 and remove release-please PR check workflow ([4e5d1a6](https://github.com/mevans7777/release-please/commit/4e5d1a615cb0dd41c344877c064f8222db4ce704))
+
 ## [1.16.0](https://github.com/mevans7777/release-please/compare/web-v1.15.0...web-v1.16.0) (2025-07-20)
 
 
