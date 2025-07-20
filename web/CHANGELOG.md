@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/mevans7777/release-please/compare/web-v1.11.0...web-v1.12.0) (2025-07-20)
+
+
+### Features
+
+* consolidate CI/CD workflows into trunk pipeline with automated testing and deployment stages ([24b3b50](https://github.com/mevans7777/release-please/commit/24b3b50dd8d36cb7d909a37398c473b5d3808dbd))
+
 ## [1.11.0](https://github.com/mevans7777/release-please/compare/web-v1.10.0...web-v1.11.0) (2025-07-19)
 
 
