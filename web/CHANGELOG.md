@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/mevans7777/release-please/compare/web-v1.12.0...web-v1.13.0) (2025-07-20)
+
+
+### Features
+
+* add web feature 23 to index.js ([8ba67b1](https://github.com/mevans7777/release-please/commit/8ba67b175d8ac4ac99ac6afc915c590718e1ec83))
+
 ## [1.12.0](https://github.com/mevans7777/release-please/compare/web-v1.11.0...web-v1.12.0) (2025-07-20)
 
 
