@@ -1,7 +1,9 @@
 name: Release Please
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -9,12 +11,44 @@ permissions:
   issues: write
 
 jobs:
-
-
-  debug:
+  release-please:
     runs-on: ubuntu-latest
+    outputs:
+      web--tag_name: ${{ steps.release.outputs.web--tag_name}}
+      web--release_created: ${{ steps.release.outputs.web--release_created}}
     steps:
-      - name: Debug
-        shell: bash
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+      - name: Print release outputs for debugging
+        continue-on-error: true
         run: |
-          env
+          echo "Release outputs:"
+          echo '${{ toJson(steps.release.outputs) }}'
+
+  build:
+    if: ${{needs.release-please.outputs.web--release_created}}
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-node-env
+        with:
+          node-version: 18
+          cache-path: web/node_modules
+          cache-key: "${{hashFiles('web/package-lock.json')}}"
+          project: web
+      - run: npm test --prefix web -- a --watchAll=false
+      - run: npm run build --prefix web
+      - run: zip -r ${{ needs.release-please.outputs.web--tag_name }}.zip web/build
+      - name: Upload Release Artifact
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload ${{ needs.release-please.outputs.web--tag_name }} ${{ needs.release-please.outputs.web--tag_name }}.zip

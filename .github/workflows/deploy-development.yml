@@ -1,0 +1,63 @@
+name: Deploy to Development
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/**'
+      - '.github/workflows/trunk.yml'
+
+jobs:
+
+  build:
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Build
+        shell: bash
+        run: |
+          echo "Build"
+
+  deploy:
+    name: 'Deploy Development'
+    runs-on: ubuntu-latest
+    needs: build
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Development
+        shell: bash
+        run: |
+          echo "Deploy to Development"
+
+  playwright-test-development:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: playwright-test
+        shell: bash
+        run: |
+          echo "playwright-test"
+
+  sitespeed-io-test-development:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: "${{ !contains(github.event.head_commit.message, 'chore(main): release web') }}"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: sitespeed-io-test
+        shell: bash
+        run: |
+          echo "sitespeed-io-test"
