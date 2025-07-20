@@ -1,9 +1,6 @@
 name: Deploy to UAT
 
 on:
-  push:
-    tags:
-      - web-v*
   workflow_dispatch:
 
 jobs:
