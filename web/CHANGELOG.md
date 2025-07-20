@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/mevans7777/release-please/compare/web-v1.13.0...web-v1.14.0) (2025-07-20)
+
+
+### Features
+
+* add web feature 24 to index.js ([e7638fc](https://github.com/mevans7777/release-please/commit/e7638fc9db50be0cb88329f50df6e13c0e3002a4))
+
 ## [1.13.0](https://github.com/mevans7777/release-please/compare/web-v1.12.0...web-v1.13.0) (2025-07-20)
 
 
