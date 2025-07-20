@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/mevans7777/release-please/compare/web-v1.15.0...web-v1.16.0) (2025-07-20)
+
+
+### Features
+
+* add web feature 26 to index module ([636a7c5](https://github.com/mevans7777/release-please/commit/636a7c5413e2c18b7fb9dd6a4290bf91b03eb9ed))
+
 ## [1.15.0](https://github.com/mevans7777/release-please/compare/web-v1.14.0...web-v1.15.0) (2025-07-20)
 
 
