@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.21.0](https://github.com/mevans7777/release-please/compare/web-v1.20.0...web-v1.21.0) (2025-07-21)
+
+
+### Features
+
+* add web feature 34 to index.js ([57a9e7c](https://github.com/mevans7777/release-please/commit/57a9e7c6086057d7d71be6000f58ef0f1d78c941))
+* add web feature 35 to index.js ([55ce5c5](https://github.com/mevans7777/release-please/commit/55ce5c515fdba6d699ed43bc1a37d6f7df86d32d))
+
 ## [1.20.0](https://github.com/mevans7777/release-please/compare/web-v1.19.0...web-v1.20.0) (2025-07-21)
 
 
