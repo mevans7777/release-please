@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/mevans7777/release-please/compare/web-v1.19.0...web-v1.19.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* add fix feature 3 to web vitals reporting ([9d4ec5a](https://github.com/mevans7777/release-please/commit/9d4ec5a494a002e19a04de1036c05822ecc0857b))
+
 ## [1.19.0](https://github.com/mevans7777/release-please/compare/web-v1.18.0...web-v1.19.0) (2025-07-21)
 
 
