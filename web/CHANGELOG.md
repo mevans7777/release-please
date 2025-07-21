@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.1](https://github.com/mevans7777/release-please/compare/web-v1.20.0...web-v1.20.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* add fix for feature 4 in web module ([b74564c](https://github.com/mevans7777/release-please/commit/b74564c3ece2e1bb77d2d17c92cf5051c192f133))
+
 ## [1.20.0](https://github.com/mevans7777/release-please/compare/web-v1.19.0...web-v1.20.0) (2025-07-21)
 
 
