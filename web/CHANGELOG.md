@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.19.0](https://github.com/mevans7777/release-please/compare/web-v1.18.0...web-v1.19.0) (2025-07-21)
+
+
+### Features
+
+* add web feature 32 to index.js ([e5a1a91](https://github.com/mevans7777/release-please/commit/e5a1a91c6b5642c55bf6730bba847bbfb54bd241))
+
+
+### Bug Fixes
+
+* update default-branch to target-branch in release-please workflow and add feature 31 ([6da9647](https://github.com/mevans7777/release-please/commit/6da9647bf00ad4b5f65e1a8ade433a6d811742d4))
+
 ## [1.18.0](https://github.com/mevans7777/release-please/compare/web-v1.17.0...web-v1.18.0) (2025-07-21)
 
 
