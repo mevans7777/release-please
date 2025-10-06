@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.23.0](https://github.com/mevans7777/release-please/compare/web-v1.22.0...web-v1.23.0) (2025-10-06)
+
+
+### Features
+
+* web feature 37 ([#34](https://github.com/mevans7777/release-please/issues/34)) ([822164b](https://github.com/mevans7777/release-please/commit/822164b1adf258a4f3541d3674a39e3082d00370))
+* web feature 38 ([#36](https://github.com/mevans7777/release-please/issues/36)) ([cdf934b](https://github.com/mevans7777/release-please/commit/cdf934b9966f218781d82d7ec5c1e1029038371a))
+
 ## [1.22.0](https://github.com/mevans7777/release-please/compare/web-v1.21.0...web-v1.22.0) (2025-07-21)
 
 
